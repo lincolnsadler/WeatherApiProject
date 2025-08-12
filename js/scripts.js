@@ -36,7 +36,6 @@ const getWeatherData = (cityName) => {
             rainSpan.textContent = `${rain} mm (última hora)`;
         })
         .catch((error) => {
-            // Lida com erros (por exemplo, cidade não encontrada)
             console.error("Erro ao buscar dados do clima:", error);
             if (error.response && error.response.status === 404) {
                 alert("Cidade não encontrada. Por favor, verifique o nome.");
