@@ -1,4 +1,4 @@
-const API_KEY = "5187218165b8f70e7a21d215513ee6d1";
+const API_KEY = "YOUR_API_KEY";
 
 const userInput = document.querySelector("#city");
 const formContainer = document.querySelector("#form-container");
