@@ -7,7 +7,7 @@ Os dados são obtidos utilizando a [WeatherAPI](https://www.weatherapi.com/).
 
 ## 📸 Demonstração
 
-![Demonstração do projeto](/preview.gif)
+![Demonstração do projeto](./preview.gif)
 
 ---
 
