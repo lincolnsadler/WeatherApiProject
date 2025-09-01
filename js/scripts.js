@@ -1,4 +1,4 @@
-const API_KEY = "YOUR_API_KEY";
+const API_KEY = "5187218165b8f70e7a21d215513ee6d1";
 
 const userInput = document.querySelector("#city");
 const formContainer = document.querySelector("#form-container");
@@ -6,8 +6,7 @@ const informationsContainer = document.querySelector("#informations-container");
 
 const temperatureSpan = document.querySelector("#temperature span");
 const umitySpan = document.querySelector("#umity span");
-const rainSpan = document.querySelector("#rain-percent span");
-
+const rainSpan = document.querySelector("#rain-percent spas");
 informationsContainer.style.display = "none";
 
 formContainer.addEventListener("submit", function (e) {
@@ -27,13 +26,15 @@ const getWeatherData = (cityName) => {
         .get(url)
         .then((response) => {
             const data = response.data;
+            console.log(data);
 
             temperatureSpan.textContent = `${data.main.temp} °C`;
 
             umitySpan.textContent = `${data.main.humidity} %`;
 
-            const rain = data.rain && data.rain["1h"] ? data.rain["1h"] : 0;
-            rainSpan.textContent = `${rain} mm (última hora)`;
+            // ! error
+            // const rain = data.rain && data.rain["1h"] ? data.rain["1h"] : 0;
+            // rainSpan.textContent = `${rain} mm (última hora)`;
         })
         .catch((error) => {
             console.error("Erro ao buscar dados do clima:", error);
